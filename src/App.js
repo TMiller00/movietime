@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from 'styled-components'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Detail, MovieList } from './pages';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #2A2A2A
+  }
+`
+
+const App = () => (
+  <Router>
+    <GlobalStyle/>
+    <Switch>
+      <Route exact path="/">
+        <MovieList/>
+      </Route>
+      <Route path="/:id">
+        <Detail/>
+      </Route>
+    </Switch>
+  </Router>
+)
 
 export default App;

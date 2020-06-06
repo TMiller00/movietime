@@ -1,0 +1,19 @@
+type Movie @model {
+  id: ID!
+  title: String!
+  description: String
+  backgroundImage: String
+  posterImage: String
+  thumbnailImage: String
+  logo: String
+  year: Int
+  duration: Int
+  likes: Int
+  videoSource: String
+  trailerSource: String
+  rottenTomatoesCritics: Int
+  rottenTomatoesAudience: Int
+  imdbRating: Float
+  cast: String
+  creators: String
+}

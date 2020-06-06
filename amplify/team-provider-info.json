@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-movienight-dev-102710-authRole",
+            "UnauthRoleArn": "arn:aws:iam::584999835053:role/amplify-movienight-dev-102710-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::584999835053:role/amplify-movienight-dev-102710-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-movienight-dev-102710-deployment",
+            "UnauthRoleName": "amplify-movienight-dev-102710-unauthRole",
+            "StackName": "amplify-movienight-dev-102710",
+            "StackId": "arn:aws:cloudformation:us-east-1:584999835053:stack/amplify-movienight-dev-102710/4bad4c60-a4f6-11ea-8c07-0a1f955da693",
+            "AmplifyAppId": "d10q3kl7e3zzut"
+        }
+    }
+}
