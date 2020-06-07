@@ -2,17 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  width: 56px;
-  height: 40px;
-  background-color: #1a1a1b;
-  border-radius: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 50%;
   margin-right: 24px;
+  border: 1px solid #FCFFFF;
 `;
 
 const Arrow = styled.div`
   color: #FCFFFF;
   font-size: 32px;
-  line-height: 40px;
+  line-height: 48px;
   text-align: center;
 `;
 
