@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 import 'moment-duration-format';
-import Button from './Button';
-import Header from './Header';
+import { Button, Header, Ratings } from './';
 
 const Container = styled.div`
   position: relative;
@@ -44,7 +43,7 @@ const Year = styled.div`
 `;
 
 
-const FeaturedTitle = ({ title, posterImage, year, duration }) => {
+const FeaturedTitle = ({ title, posterImage, year, duration, ...movie }) => {
   const formatDuration = (duration) => {
     return moment.duration(duration, 'minutes').format('h[hr] m[m]')
   };
@@ -55,6 +54,7 @@ const FeaturedTitle = ({ title, posterImage, year, duration }) => {
       <Content>
         <Header/>
         <div>
+          <Ratings {...movie}/>
           <Title>{ title }</Title>
           <Info>
             <Button/>

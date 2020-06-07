@@ -6,6 +6,7 @@ import Input from './Input';
 import Player from './Player';
 import SignUp from './SignUp';
 import Thumbnail from './Thumbnail';
+import Ratings from './Ratings';
 
 export {
   Button,
@@ -15,5 +16,6 @@ export {
   Input,
   Player,
   SignUp,
-  Thumbnail
+  Thumbnail,
+  Ratings
 }
