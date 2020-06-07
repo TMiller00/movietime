@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rotten Tomatoes Audience</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components-/-Movies-/-Ratings" transform="translate(-61.000000, -1.000000)" fill="#FCFFFF">
+            <g id="Group-3-Copy-2" transform="translate(61.000000, 0.000000)">
+                <g id="Assets-/-Icons-/-Rating-/Star">
+                    <g id="icons8-star" transform="translate(0.000000, 1.000000)">
+                        <path d="M12,0.1 L11.275,1.75 L8.675,7.575 L2.325,8.25 L0.525,8.45 L1.875,9.65 L6.6,13.925 L5.275,20.175 L4.9,21.925 L6.475,21.025 L12,17.825 L17.525,21.025 L19.1,21.925 L18.725,20.175 L17.4,13.925 L22.125,9.65 L23.475,8.45 L21.675,8.25 L15.325,7.575 L12.725,1.75 L12,0.1 Z M12,4.025 L14.05,8.65 L14.25,9.075 L14.7,9.125 L19.725,9.65 L15.975,13.025 L15.625,13.35 L15.725,13.8 L16.775,18.725 L12.4,16.225 L12,15.975 L11.6,16.225 L7.225,18.725 L8.275,13.8 L8.375,13.35 L8.025,13.025 L4.275,9.65 L9.3,9.125 L9.75,9.075 L9.95,8.65 L12,4.025 Z" id="Shape" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
