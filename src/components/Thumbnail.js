@@ -4,6 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div`
   position: relative;
   margin-bottom: 16px;
+  height: 550px;
+  width: 416px;
 `;
 
 const Info = styled.div`
