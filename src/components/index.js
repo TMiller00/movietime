@@ -11,6 +11,7 @@ import BigRatings from './BigRatings';
 import Information from './Information';
 import Summary from './Summary';
 import Person from './Person';
+import Footer from './Footer';
 
 export {
   Button,
@@ -25,5 +26,6 @@ export {
   BigRatings,
   Information,
   Summary,
-  Person
+  Person,
+  Footer
 }

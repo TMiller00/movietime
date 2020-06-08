@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { API, graphqlOperation } from 'aws-amplify';
 import { listMovies } from '../graphql/queries';
-import { Thumbnail, FeaturedTitle, SignUp } from '../components';
+import { Thumbnail, FeaturedTitle, SignUp, Footer } from '../components';
 
 const Container = styled.div`
   display: flex;
@@ -50,6 +50,7 @@ const MovieList = () => {
           })
         }
         <SignUp/>
+        <Footer/>
       </Container>
     </>
   );
