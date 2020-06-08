@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { API, graphqlOperation } from 'aws-amplify';
 import { getMovie } from '../graphql/queries';
 import { useParams } from 'react-router-dom';
-import { Player, Information, BigRatings } from '../components';
+import { Player, Information, BigRatings, Summary } from '../components';
 
 const Container = styled.div`
   background-color: black;
@@ -38,8 +38,9 @@ const Detail = () => {
           <Player {...movie}/>
             <Content>
               <Information {...movie}/>
-              <BigRatings {...movie}/>
               <p>{ movie.description }</p>
+              <BigRatings {...movie}/>
+              <Summary/>
               <p>Starring: { movie.cast }</p>
               <p>Directed by: { movie.creators }</p>
             </Content>

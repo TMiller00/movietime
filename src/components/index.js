@@ -9,6 +9,7 @@ import Thumbnail from './Thumbnail';
 import Ratings from './Ratings';
 import BigRatings from './BigRatings';
 import Information from './Information';
+import Summary from './Summary';
 
 export {
   Button,
@@ -21,5 +22,6 @@ export {
   Thumbnail,
   Ratings,
   BigRatings,
-  Information
+  Information,
+  Summary
 }
