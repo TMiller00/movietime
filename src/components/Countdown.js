@@ -8,6 +8,7 @@ const Container = styled.div`
   line-height: 12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.48);
+  margin-bottom: 16px;
 `;
 
 const Countdown = () => (

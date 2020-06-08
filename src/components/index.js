@@ -7,6 +7,8 @@ import Player from './Player';
 import SignUp from './SignUp';
 import Thumbnail from './Thumbnail';
 import Ratings from './Ratings';
+import BigRatings from './BigRatings';
+import Information from './Information';
 
 export {
   Button,
@@ -17,5 +19,7 @@ export {
   Player,
   SignUp,
   Thumbnail,
-  Ratings
+  Ratings,
+  BigRatings,
+  Information
 }

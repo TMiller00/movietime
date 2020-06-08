@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { API, graphqlOperation } from 'aws-amplify';
 import { getMovie } from '../graphql/queries';
 import { useParams } from 'react-router-dom';
-import { Player } from '../components';
+import { Player, Information, BigRatings } from '../components';
+
+const Container = styled.div`
+  background-color: black;
+  font-family: OpenSans, sans-serif;
+  color: #FFFFFF;
+`;
+
+const Content = styled.div`
+  margin: 0 80px;
+`;
 
 const Detail = () => {
   const [movie, setMovie] = useState()
@@ -21,16 +32,20 @@ const Detail = () => {
   }
 
   return (
-    <>
+    <Container>
       { movie && (
         <div>
           <Player {...movie}/>
-          <p>{ movie.description }</p>
-          <p>Starring: { movie.cast }</p>
-          <p>Directed by: { movie.creators }</p>
+            <Content>
+              <Information {...movie}/>
+              <BigRatings {...movie}/>
+              <p>{ movie.description }</p>
+              <p>Starring: { movie.cast }</p>
+              <p>Directed by: { movie.creators }</p>
+            </Content>
         </div>
       )}
-    </>
+    </Container>
   )
 }
 
