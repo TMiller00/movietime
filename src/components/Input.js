@@ -20,7 +20,6 @@ const InputBox = styled.input.attrs({
   flex: 1;
   background-color: transparent;
   border: none;
-  font-family: OpenSans, sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: rgba(255, 255, 255, 0.64);
@@ -30,7 +29,6 @@ const SubmitButton = styled.input.attrs({
   type: 'submit',
   value: 'Get updated'
 })`
-  font-family: Open Sans, sans-serif;
   background-color: #FE7200;
   border-radius: 4px;
   color: #FFFFFF;

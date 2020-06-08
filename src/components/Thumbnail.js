@@ -9,7 +9,6 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-  font-family: OpenSans, sans-serif;
   position: absolute;
   bottom: 28px;
   margin: 0 22px 0 26px;

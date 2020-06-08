@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { ImdbColor, CriticsColor } from '../assets';
 
 const Container = styled.div`
-  font-family: OpenSans, sans-serif;
   color: #FFFFFF;
 `;
 

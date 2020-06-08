@@ -9,7 +9,6 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  font-family: OpenSans, sans-serif;
   font-size: 18px;
   line-height: 32px;
   color: #FFFFFF;

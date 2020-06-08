@@ -5,9 +5,10 @@ import { Detail, MovieList } from './pages';
 
 const GlobalStyle = createGlobalStyle`
   body {
+    font-family: OpenSans, sans-serif;
     background-color: #2A2A2A
   }
-`
+`;
 
 const App = () => (
   <Router>

@@ -5,7 +5,6 @@ import { Imdb, Critics, Audience } from '../assets';
 const Container = styled.div`
   display: flex;
   align-items: center;
-  font-family: OpenSans, sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;

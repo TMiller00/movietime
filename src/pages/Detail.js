@@ -7,7 +7,6 @@ import { Player, Information, BigRatings, Summary } from '../components';
 
 const Container = styled.div`
   background-color: black;
-  font-family: OpenSans, sans-serif;
   color: #FFFFFF;
 `;
 

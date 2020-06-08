@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  font-family: OpenSans, sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: rgba(255, 255, 255, 0.64);

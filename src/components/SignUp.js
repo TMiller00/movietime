@@ -14,7 +14,6 @@ const Container = styled.div`
 `
 
 const Title = styled.div`
-  font-family: OpenSans, sans-serif;
   font-size: 48px;
   font-weight: bold;
   line-height: 48px;
@@ -23,7 +22,6 @@ const Title = styled.div`
 `;
 
 const Copy = styled.div`
-  font-family: OpenSans, sans-serif;
   font-size: 16px;
   line-height: 22px;
   text-align: center;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import moment from 'moment';
 
 const Container = styled.div`
-  font-family: OpenSans, sans-serif;
   font-size: 10px;
   line-height: 12px;
   text-transform: uppercase;

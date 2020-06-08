@@ -12,7 +12,6 @@ const Info = styled.div`
 
 const Year = styled.div`
   line-height: 16px;
-  font-family: OpenSans, sans-serif;
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
