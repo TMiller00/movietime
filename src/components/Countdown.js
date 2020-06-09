@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Countdown = () => (
   <Container>
-    Movie expires in { moment(moment().add('months', 1).date(0)).fromNow() }
+    Movie expires in { moment(moment().add(1, 'months').date(0)).fromNow() }
   </Container>
 )
 
