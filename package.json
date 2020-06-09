@@ -17,8 +17,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.1",
-    "video.js": "^7.4.1",
-    "videojs-contrib-quality-levels": "^2.0.4"
+    "video.js": "^7.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
