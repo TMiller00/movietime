@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import contribQualityLevels from 'videojs-contrib-quality-levels';
+import videojsChromecast from '@silvermine/videojs-chromecast';
+import videojsAirplay from '@silvermine/videojs-airplay';
 import '../stylesheets/video.css';
 import Header from './Header';
 import { Title } from './FeaturedTitle';
@@ -16,7 +18,8 @@ const options = {
     src: 'https://stream.mux.com/EqXKf5xIIIkseInJ1Rq1wQ1o023y01leBZ7TIWS4wDPlo.m3u8',
     type: 'application/x-mpegURL'
   }],
-  plugins: {}
+  plugins: {
+  }
 }
 
 const Container = styled.div`
@@ -57,6 +60,8 @@ const Player = ({ title, posterImage, year, duration }) => {
 
   useEffect(() => {
     videojs.registerPlugin('qualityLevels', contribQualityLevels);
+    videojs.registerPlugin('chromecast', videojsChromecast);
+    videojs.registerPlugin('airPlay', videojsAirplay);
 
     const player = videojs(playerRef.current,
       {
