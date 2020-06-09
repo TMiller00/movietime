@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CapitalOne } from '../assets';
 
 const Container = styled.div`
   display: flex;
@@ -20,16 +21,9 @@ const Name = styled.h1`
   margin: 0;
 `;
 
-const Logo = styled.img.attrs({
-  src: 'https://img.pngio.com/capital-one-logo-png-transparent-svg-vector-freebie-supply-capital-one-logo-png-2400_867.png'
-})`
-  width: 96px;
-  height: 36px;
-`;
-
 const Header = () => (
   <Container>
-    <Name>MovieNight</Name> presented by <Logo/>
+    <Name>MovieNight</Name> presented by <CapitalOne/>
   </Container>
 )
 
