@@ -6,6 +6,7 @@ const Container = styled.div`
   margin-bottom: 16px;
   height: 550px;
   width: 416px;
+  overflow: hidden;
 `;
 
 const Info = styled.div`
@@ -27,9 +28,13 @@ const Year = styled.div`
   line-height: 16px;
 `;
 
+const Image = styled.img`
+  width: 100%;
+`;
+
 const Thumbnail = ({ title, year, description, thumbnailImage }) => (
   <Container>
-    <img alt={title} src={thumbnailImage}/>
+    <Image alt={title} src={thumbnailImage}/>
     <Info>
       <Title>{ title }</Title>
       <Year>{ year }</Year>
