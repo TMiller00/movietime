@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import contribQualityLevels from 'videojs-contrib-quality-levels';
 import '../stylesheets/video.css';
 import Header from './Header';
 import { Title } from './FeaturedTitle';
-import Countdown from './Countdown';
+import { Countdown, Button } from './';
 
 const options = {
   fill: true,
@@ -27,14 +28,27 @@ const Container = styled.div`
 
 const HeaderOverlay = styled.div`
   position: absolute;
+  display: flex;
   top: 40px;
   left: 80px;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const TitleOverlay = styled.div`
   position: absolute;
-  bottom: 40px;
+  bottom: 16px;
   left: 80px;
+`;
+
+const ButtonWrapper = styled.div`
+  transform: rotate(180deg);
+
+  div {
+    margin: 0;
+  }
 `;
 
 const Player = ({ title, posterImage, year, duration }) => {
@@ -72,6 +86,11 @@ const Player = ({ title, posterImage, year, duration }) => {
       </div>
       { display && (
         <HeaderOverlay>
+          <ButtonWrapper>
+            <Link to={"/"}>
+              <Button/>
+            </Link>
+          </ButtonWrapper>
           <Header/>
         </HeaderOverlay>
       )}

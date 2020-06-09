@@ -15,6 +15,7 @@ const Arrow = styled.div`
   font-size: 32px;
   line-height: 48px;
   text-align: center;
+  text-decoration: none;
 `;
 
 const Button = () => (

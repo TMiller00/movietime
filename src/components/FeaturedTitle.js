@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, Ratings, Countdown, Information } from './';
+import { Header, Ratings, Countdown, Information, Button } from './';
 
 const Container = styled.div`
   position: relative;
@@ -21,27 +21,35 @@ const Content = styled.div`
   bottom: 40px;
 `;
 
+const Poster = styled.img`
+  width: 1439px;
+`;
+
 export const Title = styled.div`
   font-size: 100px;
   color: #FFFFFF;
 `;
 
-const FeaturedTitle = ({ title, posterImage, ...movie }) => {
+const Box = styled.div`
+  display: flex;
+`;
 
-  return (
-    <Container>
-      <img alt={title} src={posterImage}/>
-      <Content>
-        <Header/>
-        <div>
-          <Ratings {...movie}/>
-          <Title>{ title }</Title>
-          <Countdown/>
-          <Information {...movie}/>
-        </div>
-      </Content>
-    </Container>
-  )
-}
+const FeaturedTitle = ({ title, posterImage, ...movie }) => (
+  <Container>
+    <Poster alt={title} src={posterImage}/>
+    <Content>
+      <Header/>
+      <div>
+        <Ratings {...movie}/>
+        <Title>{ title }</Title>
+        <Countdown/>
+        <Box>
+          <Button/><Information {...movie}/>
+        </Box>
+      </div>
+    </Content>
+  </Container>
+);
+
 
 export default FeaturedTitle

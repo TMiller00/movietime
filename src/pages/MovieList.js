@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { API, graphqlOperation } from 'aws-amplify';
 import { listMovies } from '../graphql/queries';
 import { Thumbnail, FeaturedTitle, SignUp, Footer } from '../components';
+import { GlobalStyle } from '../App';
 
 const Container = styled.div`
   display: flex;
@@ -11,7 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
   margin: 0 80px;
   box-sizing: border-box;
-`
+`;
 
 const MovieList = () => {
   const [movies, setMovies] = useState([])
@@ -36,6 +37,7 @@ const MovieList = () => {
 
   return (
     <>
+      <GlobalStyle/>
       <Link to={movies[0] && movies[0].id} onClick={() => trackClicks(movies[0])} >
         <FeaturedTitle {...movies[0]}/>
       </Link>

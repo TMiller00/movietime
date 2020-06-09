@@ -17,6 +17,7 @@ const Name = styled.h1`
   line-height: 28px;
   text-transform: uppercase;
   color: #FFFFFF;
+  margin: 0;
 `;
 
 const Logo = styled.img.attrs({

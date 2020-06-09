@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
 import 'moment-duration-format';
-import { Button } from './';
 
 const Info = styled.div`
   display: flex;
@@ -24,7 +23,6 @@ const Information = ({ year, duration }) => {
 
   return (
     <Info>
-      <Button/>
       <Year>{ year } {'\u2022'} { formatDuration(duration) } {'\u2022'} 16+</Year>
     </Info>
   )
