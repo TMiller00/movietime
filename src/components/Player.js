@@ -3,22 +3,22 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
-import contribQualityLevels from 'videojs-contrib-quality-levels';
-import videojsChromecast from '@silvermine/videojs-chromecast';
-import videojsAirplay from '@silvermine/videojs-airplay';
+//import contribQualityLevels from 'videojs-contrib-quality-levels';
+//import videojsAirplay from '@silvermine/videojs-airplay';
 import '../stylesheets/video.css';
 import Header from './Header';
 import { Title } from './FeaturedTitle';
 import { Countdown, Button } from './';
+import '@silvermine/videojs-chromecast/dist/silvermine-videojs-chromecast.css';
+require('@silvermine/videojs-chromecast')(videojs, { preloadWebComponents: true });
 
 const options = {
   fill: true,
   controls: true,
-  sources: [{
-    src: 'https://stream.mux.com/EqXKf5xIIIkseInJ1Rq1wQ1o023y01leBZ7TIWS4wDPlo.m3u8',
-    type: 'application/x-mpegURL'
-  }],
   plugins: {
+    chromecast: {
+      addButtonToControlBar: true
+    }
   }
 }
 
@@ -54,19 +54,22 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const Player = ({ title, posterImage, year, duration }) => {
+const Player = ({ title, posterImage, year, duration, videoSource }) => {
   const [display, setDisplay] = useState(true)
   const playerRef = useRef();
 
   useEffect(() => {
-    videojs.registerPlugin('qualityLevels', contribQualityLevels);
-    videojs.registerPlugin('chromecast', videojsChromecast);
-    videojs.registerPlugin('airPlay', videojsAirplay);
+    //videojs.registerPlugin('qualityLevels', contribQualityLevels);
+    //videojs.registerPlugin('airPlay', videojsAirplay);
 
     const player = videojs(playerRef.current,
       {
         ...options,
-        poster: posterImage
+        poster: posterImage,
+        sources: [{
+          src: videoSource,
+          type: 'application/x-mpegURL'
+        }],
       }, () => {
       console.log('onPlayerReady')
     });
