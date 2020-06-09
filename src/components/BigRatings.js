@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { ImdbColor, CriticsColor } from '../assets';
 
 const Container = styled.div`
+  display: flex;
   color: #FFFFFF;
+  margin-bottom: 32px;
 `;
 
 const Box = styled.div`
@@ -12,6 +14,7 @@ const Box = styled.div`
   justify-content: space-between;
   width: 308px;
   height: 64px;
+  margin-right: 16px;
   margin-bottom: 16px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2px;

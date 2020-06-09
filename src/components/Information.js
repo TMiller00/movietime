@@ -8,7 +8,6 @@ const Info = styled.div`
   align-items: center;
 `;
 
-
 const Year = styled.div`
   line-height: 16px;
   font-size: 12px;

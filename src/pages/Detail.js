@@ -16,6 +16,11 @@ const Content = styled.div`
   margin: 16px 80px 0;
 `;
 
+const Description = styled.div`
+  margin-top: 32px;
+  margin-bottom: 32px;
+`;
+
 const Detail = () => { const [movie, setMovie] = useState()
   const { id } = useParams();
 
@@ -39,7 +44,7 @@ const Detail = () => { const [movie, setMovie] = useState()
           <Player {...movie}/>
           <Content>
             <Information {...movie}/>
-            <p>{ movie.description }</p>
+            <Description>{ movie.description }</Description>
             <BigRatings {...movie}/>
             <Summary/>
             <People category='Cast' people={movie.cast}/>
