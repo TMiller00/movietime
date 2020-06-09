@@ -38,12 +38,12 @@ const MovieList = () => {
   return (
     <>
       <GlobalStyle/>
-      <Link to={movies[0] && movies[0].id} onClick={() => trackClicks(movies[0])} >
+      <Link to={(movies[0] && movies[0].id) || "/"} onClick={() => trackClicks(movies[0])} >
         <FeaturedTitle {...movies[0]}/>
       </Link>
       <Container>
         {
-          movies.map((movie, index) => {
+          movies.slice(1).map((movie, index) => {
             return (
               <Link key={index} to={movie.id} onClick={() => trackClicks(movie)}>
                 <Thumbnail {...movie}/>
