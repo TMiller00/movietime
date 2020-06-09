@@ -12,6 +12,7 @@ import Information from './Information';
 import Summary from './Summary';
 import Person from './Person';
 import Footer from './Footer';
+import People from './People';
 
 export {
   Button,
@@ -27,5 +28,6 @@ export {
   Information,
   Summary,
   Person,
-  Footer
+  Footer,
+  People
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { API, graphqlOperation } from 'aws-amplify';
 import { getMovie } from '../graphql/queries';
 import { useParams } from 'react-router-dom';
-import { Player, Information, BigRatings, Summary, Person } from '../components';
+import { Player, Information, BigRatings, Summary, People } from '../components';
 import { GlobalStyle } from '../App';
 
 const Container = styled.div`
@@ -14,19 +14,6 @@ const Container = styled.div`
 
 const Content = styled.div`
   margin: 16px 80px 0;
-`;
-
-const CastHeading = styled.div`
-  font-size: 24px;
-  line-height: 40px;
-  font-weight: bold;
-  margin-bottom: 16px;
-`;
-
-const CastList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
 `;
 
 const Detail = () => { const [movie, setMovie] = useState()
@@ -55,14 +42,8 @@ const Detail = () => { const [movie, setMovie] = useState()
             <p>{ movie.description }</p>
             <BigRatings {...movie}/>
             <Summary/>
-            <CastHeading>Cast</CastHeading>
-            <CastList>
-              { movie.cast.split(',').map((actor, index) => <Person key={index} actor={actor}/>) }
-            </CastList>
-            <CastHeading>Director</CastHeading>
-            <CastList>
-              { movie.creators.split(',').map((actor, index) => <Person key={index} actor={actor}/>) }
-            </CastList>
+            <People category='Cast' people={movie.cast}/>
+            <People category='Creators' people={movie.creators}/>
           </Content>
         </div>
       )}
