@@ -14,6 +14,17 @@ type Movie @model {
   rottenTomatoesCritics: Int
   rottenTomatoesAudience: Int
   imdbRating: Float
-  cast: String
+  cast: [Person] @connection(keyName: "byMovie", fields: ["id"])
   creators: String
 }
+
+type Person @model
+  @key(name: "byMovie", fields: ["movieID", "firstName", "lastName", "role", "thumbnailImage"]) {
+  id: ID!
+  movieID: ID!
+  firstName: String!
+  lastName: String!
+  role: String!
+  thumbnailImage: String!
+}
+

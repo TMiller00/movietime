@@ -19,7 +19,19 @@ export const onCreateMovie = /* GraphQL */ `
       rottenTomatoesCritics
       rottenTomatoesAudience
       imdbRating
-      cast
+      cast {
+        items {
+          id
+          movieID
+          firstName
+          lastName
+          role
+          thumbnailImage
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       creators
       createdAt
       updatedAt
@@ -44,7 +56,19 @@ export const onUpdateMovie = /* GraphQL */ `
       rottenTomatoesCritics
       rottenTomatoesAudience
       imdbRating
-      cast
+      cast {
+        items {
+          id
+          movieID
+          firstName
+          lastName
+          role
+          thumbnailImage
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       creators
       createdAt
       updatedAt
@@ -69,8 +93,62 @@ export const onDeleteMovie = /* GraphQL */ `
       rottenTomatoesCritics
       rottenTomatoesAudience
       imdbRating
-      cast
+      cast {
+        items {
+          id
+          movieID
+          firstName
+          lastName
+          role
+          thumbnailImage
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       creators
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreatePerson = /* GraphQL */ `
+  subscription OnCreatePerson {
+    onCreatePerson {
+      id
+      movieID
+      firstName
+      lastName
+      role
+      thumbnailImage
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdatePerson = /* GraphQL */ `
+  subscription OnUpdatePerson {
+    onUpdatePerson {
+      id
+      movieID
+      firstName
+      lastName
+      role
+      thumbnailImage
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeletePerson = /* GraphQL */ `
+  subscription OnDeletePerson {
+    onDeletePerson {
+      id
+      movieID
+      firstName
+      lastName
+      role
+      thumbnailImage
       createdAt
       updatedAt
     }

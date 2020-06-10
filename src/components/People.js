@@ -21,7 +21,7 @@ const People = ({ category, people }) => (
   <Container>
     <CastHeading>{ category }</CastHeading>
     <CastList>
-      { people && people.split(',').map((person, index) => <Person key={index} actor={person}/>) }
+      { people && people.items && people.items.map((person, index) => <Person key={index} {...person}/>) }
     </CastList>
   </Container>
 );

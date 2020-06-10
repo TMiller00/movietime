@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 200px;
-  height: 346px;
+  height: 304px;
   color: #FFFFFF;
   margin-right: 16px;
   position: relative;
+  overflow: hidden;
 `;
 
 const Gradient = styled.div`
@@ -17,6 +18,10 @@ const Gradient = styled.div`
   bottom: 0;
   background: rgb(0,190,220);
   background: linear-gradient(0deg, rgba(0,190,220,1) 0%, rgba(0,190,220,0) 33%);
+`;
+
+const Image = styled.img`
+  width: 100%;
 `;
 
 const Content = styled.div`
@@ -36,13 +41,13 @@ const Role = styled.div`
   line-height: 14px;
 `;
 
-const Person = ({ actor }) => (
+const Person = ({ firstName, lastName, role, thumbnailImage }) => (
   <Container>
-    <img src="https://picsum.photos/200/346" alt="Actor"/>
+    <Image src={thumbnailImage} alt={`${firstName} ${lastName}`}/>
     <Gradient/>
     <Content>
-      <Name>{ actor }</Name>
-      <Role>Actor</Role>
+      <Name>{ firstName } { lastName }</Name>
+      <Role>{ role }</Role>
     </Content>
   </Container>
 )

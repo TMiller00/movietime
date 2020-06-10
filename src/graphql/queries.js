@@ -19,7 +19,19 @@ export const getMovie = /* GraphQL */ `
       rottenTomatoesCritics
       rottenTomatoesAudience
       imdbRating
-      cast
+      cast {
+        items {
+          id
+          movieID
+          firstName
+          lastName
+          role
+          thumbnailImage
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       creators
       createdAt
       updatedAt
@@ -49,8 +61,45 @@ export const listMovies = /* GraphQL */ `
         rottenTomatoesCritics
         rottenTomatoesAudience
         imdbRating
-        cast
+        cast {
+          nextToken
+        }
         creators
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getPerson = /* GraphQL */ `
+  query GetPerson($id: ID!) {
+    getPerson(id: $id) {
+      id
+      movieID
+      firstName
+      lastName
+      role
+      thumbnailImage
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listPersons = /* GraphQL */ `
+  query ListPersons(
+    $filter: ModelPersonFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPersons(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        movieID
+        firstName
+        lastName
+        role
+        thumbnailImage
         createdAt
         updatedAt
       }
