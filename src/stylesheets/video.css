@@ -10,3 +10,12 @@
   font-size: 64px;
   line-height: 164px;
 }
+
+video[poster]{
+  object-fit: cover;
+}
+
+.vjs-poster {
+  background-size: cover;
+  background-position: inherit;
+}
