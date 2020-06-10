@@ -48,7 +48,6 @@ const Detail = () => { const [movie, setMovie] = useState()
             <BigRatings {...movie}/>
             <Summary {...movie}/>
             <People category='Cast' people={movie.cast}/>
-            <People category='Creators' people={movie.creators}/>
           </Content>
         </div>
       )}
