@@ -22,9 +22,8 @@ type Person @model
   @key(name: "byMovie", fields: ["movieID", "firstName", "lastName", "role", "thumbnailImage"]) {
   id: ID!
   movieID: ID!
-  firstName: String!
-  lastName: String!
-  role: String!
-  thumbnailImage: String!
+  firstName: String
+  lastName: String
+  role: String
+  thumbnailImage: String
 }
-
