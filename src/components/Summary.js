@@ -30,14 +30,14 @@ const Line = styled.div`
   margin-top: 8px;
 `;
 
-const Summary = () => (
+const Summary = ({ description }) => (
   <Container>
     <Indicator>
       <Crackle/>
       <Line/>
     </Indicator>
     <Text>
-      During one night on patrol, a veteran cop and his rookie partner chase down violent suspects while searching for a missing girl and hunting two cop killers on the loose in Los Angeles.
+      { description }
     </Text>
   </Container>
 )

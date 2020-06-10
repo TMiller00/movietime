@@ -44,9 +44,9 @@ const Detail = () => { const [movie, setMovie] = useState()
           <Player {...movie}/>
           <Content>
             <Information {...movie}/>
-            <Description>{ movie.description }</Description>
+            <Description>{ movie.logo }</Description>
             <BigRatings {...movie}/>
-            <Summary/>
+            <Summary {...movie}/>
             <People category='Cast' people={movie.cast}/>
             <People category='Creators' people={movie.creators}/>
           </Content>
