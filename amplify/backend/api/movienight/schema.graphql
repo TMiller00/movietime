@@ -1,5 +1,6 @@
-type Movie @model {
+type Movie @model @key(name: "ByTitle", fields: ["title", "position"]) {
   id: ID!
+  position: Int!
   title: String!
   description: String
   backgroundImage: String

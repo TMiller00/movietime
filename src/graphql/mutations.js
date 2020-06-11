@@ -8,6 +8,7 @@ export const createMovie = /* GraphQL */ `
   ) {
     createMovie(input: $input, condition: $condition) {
       id
+      position
       title
       description
       backgroundImage
@@ -48,6 +49,7 @@ export const updateMovie = /* GraphQL */ `
   ) {
     updateMovie(input: $input, condition: $condition) {
       id
+      position
       title
       description
       backgroundImage
@@ -88,6 +90,7 @@ export const deleteMovie = /* GraphQL */ `
   ) {
     deleteMovie(input: $input, condition: $condition) {
       id
+      position
       title
       description
       backgroundImage

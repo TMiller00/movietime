@@ -43,7 +43,7 @@ const MovieList = () => {
       </Link>
       <Container>
         {
-          movies.slice(1).map((movie, index) => {
+          movies.slice(1).sort((a, b) => a.position - b.position).map((movie, index) => {
             return (
               <Link key={index} to={movie.id} onClick={() => trackClicks(movie)}>
                 <Thumbnail {...movie}/>

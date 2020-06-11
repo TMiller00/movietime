@@ -5,6 +5,7 @@ export const getMovie = /* GraphQL */ `
   query GetMovie($id: ID!) {
     getMovie(id: $id) {
       id
+      position
       title
       description
       backgroundImage
@@ -47,6 +48,7 @@ export const listMovies = /* GraphQL */ `
     listMovies(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
+        position
         title
         description
         backgroundImage

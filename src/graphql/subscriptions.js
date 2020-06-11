@@ -5,6 +5,7 @@ export const onCreateMovie = /* GraphQL */ `
   subscription OnCreateMovie {
     onCreateMovie {
       id
+      position
       title
       description
       backgroundImage
@@ -42,6 +43,7 @@ export const onUpdateMovie = /* GraphQL */ `
   subscription OnUpdateMovie {
     onUpdateMovie {
       id
+      position
       title
       description
       backgroundImage
@@ -79,6 +81,7 @@ export const onDeleteMovie = /* GraphQL */ `
   subscription OnDeleteMovie {
     onDeleteMovie {
       id
+      position
       title
       description
       backgroundImage
