@@ -36,7 +36,7 @@ const HeaderOverlay = styled.div`
   position: absolute;
   display: flex;
   top: 40px;
-  left: 80px;
+  left: 32px;
 
   a {
     text-decoration: none;
@@ -51,6 +51,7 @@ const TitleOverlay = styled.div`
 
 const ButtonWrapper = styled.div`
   transform: rotate(180deg);
+  margin-right: 16px;
 
   div {
     margin: 0;

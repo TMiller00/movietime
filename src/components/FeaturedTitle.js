@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Header, Ratings, Countdown, Information, Button } from './';
+import { Header, Countdown, Information } from './';
+import { ParallaxLayer } from 'react-spring/renderprops-addons'
 
 const Container = styled.div`
   position: relative;
@@ -10,20 +11,16 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const Content = styled.div`
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-  padding: 0 80px;
-  top: 40px;
-  bottom: 40px;
+const HeaderContainer = styled.div`
+  margin-left: 32px;
 `;
 
-const Poster = styled.img`
-  width: 1439px;
+const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: flex-end;
+  margin-right: 32px;
 `;
 
 export const Title = styled.div`
@@ -31,26 +28,34 @@ export const Title = styled.div`
   color: #FFFFFF;
 `;
 
-const Box = styled.div`
-  display: flex;
+const Element = styled.img`
+  width: 100%;
 `;
 
 const FeaturedTitle = ({ title, posterImage, ...movie }) => (
   <Container>
-    <Poster alt={title} src={posterImage}/>
-    <Content>
-      <Header/>
-      <div>
-        <Ratings {...movie}/>
-        <Title>{ title }</Title>
+    <ParallaxLayer offset={0} speed={0} style={{ backgroundImage: "url(https://silent-gianni.s3.amazonaws.com/GrandIsle_base.jpg)", backgroundSize: 'cover' }}/>
+    <ParallaxLayer offset={0.0} speed={0.5}>
+      <Element src="https://silent-gianni.s3.amazonaws.com/GrandIsle_cast.png" alt={title}/>
+    </ParallaxLayer>
+    <ParallaxLayer offset={0.0} speed={-0.5}>
+      <Element src="https://silent-gianni.s3.amazonaws.com/GrandIsle_scene.png" alt={title}/>
+    </ParallaxLayer>
+    <ParallaxLayer offset={0.0} speed={-0.25}>
+      <Element src="https://silent-gianni.s3.amazonaws.com/GrandIsle_title.png" alt={title}/>
+    </ParallaxLayer>
+    <ParallaxLayer offset={0.05} speed={0.5}>
+      <HeaderContainer>
+        <Header/>
+      </HeaderContainer>
+    </ParallaxLayer>
+    <ParallaxLayer offset={0.80} speed={-0.5}>
+      <InfoContainer>
         <Countdown/>
-        <Box>
-          <Button/><Information {...movie}/>
-        </Box>
-      </div>
-    </Content>
+        <Information {...movie}/>
+      </InfoContainer>
+    </ParallaxLayer>
   </Container>
-);
-
+)
 
 export default FeaturedTitle

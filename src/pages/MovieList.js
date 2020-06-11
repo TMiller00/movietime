@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { API, graphqlOperation } from 'aws-amplify';
 import { listMovies } from '../graphql/queries';
 import { Thumbnail, FeaturedTitle, SignUp, Footer } from '../components';
 import { GlobalStyle } from '../App';
+import { Parallax } from 'react-spring/renderprops-addons'
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const Container = styled.div`
 
 const MovieList = () => {
   const [movies, setMovies] = useState([])
+  const parallaxRef = useRef();
 
   useEffect(() => {
     fetchMovies()
@@ -36,7 +38,7 @@ const MovieList = () => {
   }
 
   return (
-    <>
+    <Parallax pages={4} scrolling={true} ref={parallaxRef}>
       <GlobalStyle/>
       <Link to={(movies[0] && movies[0].id) || "/"} onClick={() => trackClicks(movies[0])} >
         <FeaturedTitle {...movies[0]}/>
@@ -54,7 +56,7 @@ const MovieList = () => {
         <SignUp/>
         <Footer/>
       </Container>
-    </>
+    </Parallax>
   );
 }
 

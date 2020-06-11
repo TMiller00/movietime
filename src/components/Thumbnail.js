@@ -9,6 +9,16 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
+const Gradient = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(0,190,220);
+  background: linear-gradient(0deg, rgba(0,190,220,1) 0%, rgba(0,190,220,0) 33%);
+`;
+
 const Info = styled.div`
   position: absolute;
   bottom: 28px;
@@ -35,6 +45,7 @@ const Image = styled.img`
 const Thumbnail = ({ title, year, description, thumbnailImage }) => (
   <Container>
     <Image alt={title} src={thumbnailImage}/>
+    <Gradient/>
     <Info>
       <Title>{ title }</Title>
       <Year>{ year }</Year>
